@@ -1,0 +1,14 @@
+{
+  "name": "thumbsup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pages": "thumbsup --config config.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "thumbsup": "^2.17.1"
+  }
+}

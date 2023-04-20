@@ -1,0 +1,149 @@
+## Comment out when doing local development
+backend:
+  name: github
+  repo: NCDgov/NCD-Media
+  base_url: https://pages.cloud.gov
+  auth_endpoint: external/auth/github
+  preview_context: pages/build
+  branch: main
+  use_graphql: true
+
+##
+## Uncomment when doing local development on Netlify CMS
+## Run `npx netlify-cms-proxy-server` to start working locally
+## In another terminal, start the app with `npm start`
+## See https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+##
+
+# backend:
+#   name: git-gateway
+# local_backend: true
+
+##
+##
+
+media_folder: uploads
+public_folder: ""
+logo_url: https://federalist.18f.gov/assets/images/federalist-logo.png
+
+collections:
+  - label: Documents
+    name: documents
+    folder: uploads/documents/
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Document",
+          name: "file",
+          widget: "file",
+          allow_multiple: false,
+          media_folder: ""
+        }
+  - label: Event Photos
+    name: event-photos
+    folder: uploads/event-photos/
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Event Photo",
+          name: "file",
+          widget: "image",
+          allow_multiple: false,
+          media_folder: ""
+        }
+  - label: Frameworks
+    name: frameworks
+    folder: uploads/frameworks/
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Framework",
+          name: "file",
+          widget: "file",
+          allow_multiple: false,
+          media_folder: ""
+        }
+  - label: Letters
+    name: letters
+    folder: uploads/letters/
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Letter",
+          name: "file",
+          widget: "file",
+          allow_multiple: false,
+          media_folder: ""
+        }
+  - label: Images
+    name: images
+    folder: uploads/images/
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Image",
+          name: "file",
+          widget: "image",
+          allow_multiple: false,
+          media_folder: ""
+        }
+  - label: PDFs
+    name: pdfs
+    folder: uploads/pdfs/
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "PDF",
+          name: "file",
+          widget: "file",
+          allow_multiple: false,
+          media_folder: ""
+        }
+  - label: Reports
+    name: reports
+    folder: uploads/reports/
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Report",
+          name: "file",
+          widget: "file",
+          allow_multiple: false,
+          media_folder: ""
+        }
+  - label: Videos
+    name: videos
+    folder: uploads/videos/
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Video",
+          name: "file",
+          widget: "file",
+          allow_multiple: false,
+          media_folder: ""
+        }
